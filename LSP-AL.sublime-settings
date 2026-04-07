@@ -1,0 +1,12 @@
+{
+    "selector": "source.al",
+    "command": [
+        "${wrapper_path}",
+        "--auto-download-al-extension",
+        "--al-extension-channel",
+        "${al_extension_channel}"
+    ],
+    "initializationOptions": {},
+    "settings": {},
+    "al_extension_channel": "release"
+}

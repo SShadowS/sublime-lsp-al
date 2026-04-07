@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "LSP-AL: Switch Release Channel",
+        "command": "lsp_al_switch_channel"
+    },
+    {
+        "caption": "LSP-AL: Force Update AL Extension",
+        "command": "lsp_al_force_update"
+    }
+]
