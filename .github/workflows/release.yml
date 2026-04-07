@@ -1,0 +1,27 @@
+name: Build Sublime Package
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build .sublime-package
+        run: |
+          zip -r LSP-AL.sublime-package . \
+            -x ".git/*" \
+            -x ".github/*" \
+            -x ".gitignore" \
+            -x ".gitattributes"
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: LSP-AL.sublime-package
